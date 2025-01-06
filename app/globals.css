@@ -2,20 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.trendingPhoto {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: gray;
 }
