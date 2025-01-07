@@ -18,3 +18,9 @@
     overflow: hidden;
     background-color: gray;
 }
+
+.dealsCard {
+    min-width: 400px;
+    aspect-ratio: 2/1.5;
+    background-color: gray;
+}
