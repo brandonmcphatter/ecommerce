@@ -24,3 +24,19 @@
     aspect-ratio: 2/1.5;
     background-color: gray;
 }
+
+.newArrivalLead {
+    min-width: 200px;
+    max-width: 300px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    overflow: hidden;
+}
+.newArrivalCard {
+    min-width: 200px;
+    max-width: 300px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: gray;
+}
