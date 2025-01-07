@@ -6,7 +6,7 @@ export default function DealsSection() {
     return (
         <section className={'flex flex-col bg-gray-400 py-6 gap-4'}>
             <h1 className={'font-bold text-xl'}>Deals & Steals</h1>
-            <div className={' flex gap-4 overflow-x-auto'}>
+            <div className={' flex gap-4 overflow-x-auto pb-6'}>
                 {itemTitles.map((title) => (
                     <DealsItem title={title} key={title}/>
                 ))}
