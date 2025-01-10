@@ -1,7 +1,6 @@
 import NewArrivalCard from "@/components/NewArrivalsSection/NewArrivalCard";
 
 export default function NewArrivalsSection() {
-// make 3 shoe objects with brand, shoeName, gender, and price
     const shoes = [
         {brand: 'Nike', shoeName: 'Air Force 1', gender: 'Men', price: 100},
         {brand: 'Vans', shoeName: 'Old Skool', gender: 'Women', price: 100},
@@ -15,7 +14,7 @@ export default function NewArrivalsSection() {
                     <div className={'newArrivalLead flex flex-col items-center justify-center gap-3'}>
                         <h5 className={'text-sm'}>A FIRST LOOK</h5>
                         <h2 className={'text-3xl'}>New Arrivals</h2>
-                        <button className={'border border-black rounded px-3 py-1 text-sm'}>Shop What&#39;s New</button>
+                        <button className={' border-2 border-black rounded px-3 py-1 text-sm'}>Shop What&#39;s New</button>
                     </div>
                 </div>
                 {shoes.map((shoe, index) => <NewArrivalCard {...shoe} key={index}/>)}
