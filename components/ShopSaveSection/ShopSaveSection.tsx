@@ -9,7 +9,7 @@ export default function ShopSaveSection() {
     return (
         <section className={''}>
             <div>
-                <h2>Ways to Shop & Save!</h2>
+                <h2 className={'font-bold text-xl'}>Ways to Shop & Save!</h2>
             </div>
 
             <div className={'flex flex-col md:flex-row gap-4'}>
