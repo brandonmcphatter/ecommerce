@@ -40,3 +40,10 @@
     overflow: hidden;
     background-color: gray;
 }
+
+.banner {
+    background-image: url("https://images.pexels.com/photos/259698/pexels-photo-259698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
