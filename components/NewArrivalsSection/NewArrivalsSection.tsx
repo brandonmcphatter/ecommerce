@@ -8,7 +8,7 @@ export default function NewArrivalsSection() {
     ]
 
     return (
-        <section className={''}>
+        <section className={'flex md:justify-center'}>
             <div className={'flex gap-4 py-6 overflow-x-auto'}>
                 <div>
                     <div className={'newArrivalLead flex flex-col items-center justify-center gap-3'}>
