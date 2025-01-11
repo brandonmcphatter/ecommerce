@@ -8,7 +8,7 @@ import JoinEmail from "@/components/generalUse/JoinEmail";
 export default function Home() {
     return (
         <div>
-            <main>
+            <main className={'flex flex-col gap-8'}>
                 <TrendingSection/>
                 <ClearanceBanner/>
                 <DealsSection/>
