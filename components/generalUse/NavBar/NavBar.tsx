@@ -12,18 +12,36 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className={'flex flex-col py-3 border-b px-6 mb-3 relative h-16'}>
-                {!showSearch && <div className={'flex justify-between items-center '}>
+            <nav className={'h-fit flex flex-col gap-4 py-3 border-b px-6 mb-3 relative'}>
+                <div>
+                    {!showSearch && <div className={'flex justify-between items-center '}>
+                        <div>
+                            <h1 className={'text-2xl font-bold'}>CoolKix</h1>
+                        </div>
+                        <div className={'flex gap-5'}>
+                            <span onClick={toggleSearch}><MagnifyingGlass/></span>
+                            <span onClick={toggleBag}><ShoppingBag/></span>
+                            <MenuToggle/>
+                            <span className={'hidden md:flex'}><ProfileIcon/></span>
+                        </div>
+                    </div>}
+                </div>
+
+                <div className={'flex justify-between'}>
                     <div>
-                        <h1 className={'text-2xl font-bold'}>CoolKix</h1>
+                        <ul className={'flex gap-7'}>
+                            <li>New</li>
+                            <li>Women</li>
+                            <li>Men</li>
+                            <li>Kids</li>
+                            <li>Collections</li>
+                            <li>Brands</li>
+                            <li>Sale</li>
+                        </ul>
                     </div>
-                    <div className={'flex gap-5'}>
-                        <span onClick={toggleSearch}><MagnifyingGlass/></span>
-                        <span onClick={toggleBag}><ShoppingBag/></span>
-                        <MenuToggle/>
-                        <span className={'hidden md:flex'}><ProfileIcon/></span>
-                    </div>
-                </div>}
+                    <div>Help & Support</div>
+                </div>
+
 
             </nav>
             {showSearch && <SearchBar toggleSearch={toggleSearch}/>}
