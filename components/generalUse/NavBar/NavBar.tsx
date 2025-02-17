@@ -36,13 +36,13 @@ export default function NavBar() {
                 <div className={'hidden md:flex justify-between'}>
                     <div>
                         <ul className={'flex gap-7'}>
-                            <li>New</li>
-                            <li>Women</li>
-                            <li>Men</li>
-                            <li>Kids</li>
-                            <li>Collections</li>
-                            <li>Brands</li>
-                            <li>Sale</li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>New</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Women</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Men</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Kids</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Collections</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Brands</Link></li>
+                            <li className={'hover:font-semibold'}><Link href={'/shoes'}>Sale</Link></li>
                         </ul>
                     </div>
                     <div>Help & Support</div>
