@@ -3,6 +3,7 @@
 import {CloseIcon, MagnifyingGlass, MenuToggle, ProfileIcon, ShoppingBag} from "@/components/generalUse/NavBar/Icons";
 import {useState} from "react";
 import ShoppingBagScreen from "@/components/generalUse/NavBar/ShoppingBagScreen";
+import Link from "next/link";
 
 export default function NavBar() {
     const [showSearch, setShowSearch] = useState(false);
@@ -12,11 +13,16 @@ export default function NavBar() {
 
     return (
         <>
+            <div className={'text-sm md:text-base h-10 bg-blue-100 text-center flex justify-center items-center'}>
+                Trending in 2025: Shop the  <span className={'font-bold underline ms-1'}> Top 10 Shoes for Spring</span>
+            </div>
             <nav className={'h-fit flex flex-col gap-4 py-3 border-b px-6 mb-3 relative'}>
                 <div>
                     {!showSearch && <div className={'flex justify-between items-center '}>
                         <div>
-                            <h1 className={'text-2xl font-bold'}>CoolKix</h1>
+                            <Link href={'/'}>
+                                <h1 className={'text-2xl font-bold'}>CoolKix</h1>
+                            </Link>
                         </div>
                         <div className={'flex gap-5'}>
                             <span onClick={toggleSearch}><MagnifyingGlass/></span>
@@ -27,7 +33,7 @@ export default function NavBar() {
                     </div>}
                 </div>
 
-                <div className={'flex justify-between'}>
+                <div className={'hidden md:flex justify-between'}>
                     <div>
                         <ul className={'flex gap-7'}>
                             <li>New</li>
@@ -43,9 +49,9 @@ export default function NavBar() {
                 </div>
 
 
-            </nav>
             {showSearch && <SearchBar toggleSearch={toggleSearch}/>}
             {showBag && <ShoppingBagScreen toggleBag={toggleBag}/>}
+            </nav>
         </>
 
     )
@@ -53,12 +59,12 @@ export default function NavBar() {
 
 function SearchBar({toggleSearch}: { toggleSearch: () => void }) {
     return (
-        <div className={'absolute inset-x-0 top-0 '}>
-            <div className={'flex items-center gap-2'}>
+        <div className={'flex flex-col gap-2'}>
+            <div className={'flex items-center gap-3'}>
                 <input type="text" placeholder={'Search for shoes'} className={'bg-gray-100 p-2 rounded-lg w-full'}/>
                 <span onClick={toggleSearch}><CloseIcon/></span>
             </div>
-            <div className={'border-2 rounded p-4'}>
+            <div className={'rounded p-4  h-36'}>
                 <p>No Past Searches</p>
             </div>
         </div>
